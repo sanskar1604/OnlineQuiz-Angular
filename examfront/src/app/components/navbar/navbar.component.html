@@ -2,10 +2,13 @@
   
   
     <mat-toolbar color="primary">
-     <a routerLink="/" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
-     </a>
-    <span>Online Quiz</span>
+     <a  routerLink="/" mat-icon-button class="example-icon mb20" aria-label="Example icon-button with menu icon">
+      <!-- <mat-icon></mat-icon> -->
+      <span routerLink="/" ><img src="../../../assets/DXC_Logo.png" alt="Girl in a jacket" width="100" height="60"></span>
+
+     </a>      
+     <h3 style="margin-left: 80px;">Online Quiz</h3>
+
     <span class="example-spacer"></span>
     <a *ngIf="!isLoggedIn"
      [routerLink]="'/login'" mat-icon-button class="example-icon favorite-icon mr20" aria-label="Example icon-button with heart icon">

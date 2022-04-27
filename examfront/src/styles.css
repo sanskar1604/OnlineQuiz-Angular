@@ -3,6 +3,10 @@
 html, body {
      height: 100%; 
      background-color: #f5fff5;
+     /* background-image:url('assets/Background-Image.webp'); */
+     background-attachment: fixed;
+  background-size: auto;
+  background-repeat: no-repeat;
     }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
@@ -20,4 +24,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 .mb20{
     margin-bottom: 20px !important;
+}
+.ml50{
+    margin-bottom: 50px !important;
+
 }

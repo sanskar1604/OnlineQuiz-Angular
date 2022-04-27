@@ -34,11 +34,9 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { UpdateQuizComponent } from './pages/admin/update-quiz/update-quiz.component';
 import { ViewQuizQuestionsComponent } from './pages/admin/view-quiz-questions/view-quiz-questions.component';
-
-import { SidebarComponent as UserSidebar } from './pages/user/sidebar/sidebar.component';
-import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component';
-import { InstructionsComponent } from './pages/user/instructions/instructions.component';
-import { StartComponent } from './pages/user/start/start.component';
+import { AddQuestionComponent } from './pages/admin/add-question/add-question.component';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+import { UpdateQuestionComponent } from './pages/admin/update-question/update-question.component';
 
 @NgModule({
   declarations: [
@@ -59,10 +57,9 @@ import { StartComponent } from './pages/user/start/start.component';
     AddQuizComponent,
     UpdateQuizComponent,
     ViewQuizQuestionsComponent,
-    UserSidebar,
-    LoadQuizComponent,
-    InstructionsComponent,
-    StartComponent
+    AddQuestionComponent,
+    UpdateQuestionComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -80,7 +77,8 @@ import { StartComponent } from './pages/user/start/start.component';
     MatListModule,
     MatButtonModule,
     MatSelectModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    CKEditorModule
     
   ],
   providers: [authInterceptorProviders],
