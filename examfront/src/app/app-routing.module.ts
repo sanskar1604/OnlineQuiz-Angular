@@ -12,7 +12,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { InstructionsComponent } from './pages/user/instructions/instructions.component';
 import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component';
+import { StartComponent } from './pages/user/start/start.component';
 import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
 import { AdminGuard } from './services/admin.guard';
 import { NormalGuard } from './services/normal.guard';
@@ -89,13 +91,22 @@ const routes: Routes = [
     canActivate:[NormalGuard],
     children: [
       {
-        path: '/:catId',
+        path: ':catId',
         component: LoadQuizComponent,
 
-      }
+      },
+      {
+        path: 'instructions/:qid',
+        component: InstructionsComponent,
+      },
+      
     ]
   },
- 
+  {
+    path: 'start/:qid',
+    component: StartComponent,
+    canActivate:[NormalGuard],
+  }
 
 ];
 

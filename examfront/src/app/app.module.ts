@@ -37,6 +37,9 @@ import { ViewQuizQuestionsComponent } from './pages/admin/view-quiz-questions/vi
 
 import { SidebarComponent as UserSidebar } from './pages/user/sidebar/sidebar.component';
 import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component';
+import { InstructionsComponent } from './pages/user/instructions/instructions.component';
+import { StartComponent } from './pages/user/start/start.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,8 +60,9 @@ import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component';
     UpdateQuizComponent,
     ViewQuizQuestionsComponent,
     UserSidebar,
-    LoadQuizComponent
-    
+    LoadQuizComponent,
+    InstructionsComponent,
+    StartComponent
   ],
   imports: [
     BrowserModule,

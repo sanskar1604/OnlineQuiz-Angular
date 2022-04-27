@@ -8,13 +8,7 @@ import { CategoryService } from 'src/app/services/category.service';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent implements OnInit {
-  categories=[
-    {
-     cid:'',
-      title:'',
-      description:''
-    }
-  ];
+  categories:any;
   constructor(
     private _cat:CategoryService, private _snack:MatSnackBar
   ) { }
