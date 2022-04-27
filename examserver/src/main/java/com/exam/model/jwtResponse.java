@@ -1,14 +1,14 @@
 package com.exam.model;
 
-public class jwtResponse {
+public class JwtResponse {
+	
 	String token;
-
-	public jwtResponse() {
-		super();
-		// TODO Auto-generated constructor stub
+	
+	public JwtResponse() {
+		
 	}
 
-	public jwtResponse(String token) {
+	public JwtResponse(String token) {
 		super();
 		this.token = token;
 	}
@@ -22,4 +22,6 @@ public class jwtResponse {
 	}
 	
 	
+	
+
 }

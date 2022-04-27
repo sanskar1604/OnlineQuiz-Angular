@@ -1,5 +1,6 @@
 package com.exam.model;
 
+import javax.annotation.Generated;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -9,27 +10,24 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class UserRole {
-
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long userRoleId;
-
-//	User
+	
+	//user
+	
 	@ManyToOne(fetch = FetchType.EAGER)
 	private User user;
-
-//	Role
+	
 	@ManyToOne
 	private Role role;
-
-//	Default Constructor
+	
 	public UserRole() {
-		super();
-		// TODO Auto-generated constructor stub
+		
 	}
+	
 
-
-//	Getter & Setter Method Starts
 	public Long getUserRoleId() {
 		return userRoleId;
 	}
@@ -54,7 +52,8 @@ public class UserRole {
 		this.role = role;
 	}
 	
-//	Getter & Setter Method End
+	
+	
 	
 
 }

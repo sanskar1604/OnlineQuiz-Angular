@@ -11,39 +11,17 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "roles")
+@Table(name="roles")
 public class Role {
-
+	
 	@Id
 	private Long roleId;
 	private String roleName;
 	
-	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "role")
-	private Set<UserRole> userRoles = new HashSet<>();
 	
-
-//	Default Constructor
-	public Role() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
-//	Getter & Setter Method Starts
-	public Long getRoleId() {
-		return roleId;
-	}
-
-	public void setRoleId(Long roleId) {
-		this.roleId = roleId;
-	}
-
-	public String getRoleName() {
-		return roleName;
-	}
-
-	public void setRoleName(String roleName) {
-		this.roleName = roleName;
-	}
+	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY,mappedBy = "role")
+	private Set<UserRole> userRoles=new HashSet<>();
+	
 	
 	public Set<UserRole> getUserRoles() {
 		return userRoles;
@@ -53,19 +31,32 @@ public class Role {
 		this.userRoles = userRoles;
 	}
 
-	
-	
-//	Getter & Setter Method End
-	
-//	toString Method
-
-
-	@Override
-	public String toString() {
-		return "Role [roleId=" + roleId + ", roleName=" + roleName + "]";
+	public Role() {
+		
 	}
 	
+	public Role(Long roleId, String roleName) {
+		super();
+		this.roleId = roleId;
+		this.roleName = roleName;
+	}
 
+
+
+	public Long getRoleId() {
+		return roleId;
+	}
+	public void setRoleId(Long roleId) {
+		this.roleId = roleId;
+	}
+	public String getRoleName() {
+		return roleName;
+	}
+	public void setRoleName(String roleName) {
+		this.roleName = roleName;
+	}
 	
 	
+	
+
 }

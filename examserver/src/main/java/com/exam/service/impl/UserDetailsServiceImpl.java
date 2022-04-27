@@ -1,4 +1,4 @@
-package com.exam.serviceImpl;
+package com.exam.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -10,18 +10,21 @@ import com.exam.model.User;
 import com.exam.repo.UserRepository;
 
 @Service
-public class UserDetailsServiceImpl implements UserDetailsService{
+public class UserDetailsServiceImpl implements UserDetailsService {
 
 	@Autowired
 	private UserRepository userRepository;
 	
+	
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		User user = this.userRepository.findByUsername(username);
+		// TODO Auto-generated method stub
 		
-		if(user == null) {
+		User user =this.userRepository.findByUsername(username);
+		
+		if(user==null) {
 			System.out.println("User not found");
-			throw new UsernameNotFoundException("No user found");
+			throw new UsernameNotFoundException("User not found");
 		}
 		return user;
 	}
